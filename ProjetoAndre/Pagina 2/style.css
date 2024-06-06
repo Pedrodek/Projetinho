@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+body{
+    background-color: rgba(221, 184, 83, 0.836);
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    
+}
+
+.abcde{
+    grid-column: 2/2;
+}
+
+.pong{
+    border: 2px black solid;
+    border-radius: .5rem;
+    background-color: rgba(250, 235, 215, 0.932);
+    width: 100%;
+    padding: .5rem;
+}
+
+.tenor-gif-embed{
+    width: 100%;
+}

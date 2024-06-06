@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,body{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+body {
+    display: grid;
+    justify-items: center;
+    background-color: rgb(122, 47, 47);
+}
+
+.titulo {
+    font-family: "Bebas Neue", sans-serif;
+    
+}
+
+.paragrafo_1 {
+    width: 90%;
+    display: grid;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+p {
+    font-size: 90%;
+    text-align: center;
+}
+
+
+
