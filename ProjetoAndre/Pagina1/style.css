@@ -42,7 +42,7 @@ header {
     align-content: center;
     width: 100%;
     height: 11%;
-    padding: 2%;
+    padding: 1%;
 }
 
 .header-content {
@@ -54,14 +54,21 @@ header {
     width: 92%;
 }
 
+.logo {
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.logo img {
+    width: 100%;
+}
+
 header nav {
-    display: grid;
-    grid-column: 2/2;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    width: 90%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 78%;
 }
 
 header nav a {
@@ -71,7 +78,8 @@ header nav a {
 }
 
 .icons {
-
+    display: flex;
+    justify-content: space-between;
 }
 
 .icon-1 {
@@ -91,7 +99,7 @@ main {
 
 @media (min-width: 900px) {
     .box-top-page {
-        height: 140vh;
+        height: 110vh;
         background-size: 100% 150%;
     }
 }
