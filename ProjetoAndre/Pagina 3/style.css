@@ -13,11 +13,12 @@ html,body{
 body {
     display: grid;
     justify-items: center;
-    background-color: rgb(122, 47, 47);
+    background: url('C:\Users\yuri.lsilva2.SENACEDU\Videos\riko-rikoamv.gif');
 }
 
 .titulo {
     font-family: "Bebas Neue", sans-serif;
+    justify-self: left;
     
 }
 
@@ -34,6 +35,14 @@ p {
     font-size: 90%;
     text-align: center;
 }
+
+.tenor-gif-embed {
+    width: 200px;
+    height: auto;
+    top: 40%;
+    left: 45%;
+}
+
 
 
 

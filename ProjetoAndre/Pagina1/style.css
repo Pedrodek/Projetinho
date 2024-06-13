@@ -9,7 +9,7 @@ html, body {
     display: flex;
     box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
+    height: auto;
 }
 
 body {
@@ -19,10 +19,15 @@ body {
 }
 
 h6 {
-    color: white;
+    color: white !important;
+    margin: 0 !important; 
+    overflow: hidden;
 }
 
 .faixa {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 100%;
     background-image: url('./svgs/blurry-gradient-haikei4.svg');
     background-repeat: no-repeat;
@@ -41,7 +46,7 @@ header {
     justify-content: center;
     align-content: center;
     width: 100%;
-    height: 11%;
+    height: 10%;
     padding: 1%;
 }
 
@@ -52,6 +57,7 @@ header {
     grid-template-rows: 1fr 0;
     grid-template-columns: 1fr 5fr 1fr;
     width: 92%;
+    overflow: hidden;
 }
 
 .logo {
@@ -89,17 +95,93 @@ header nav a {
 
 main {
     height: 100%;
+    overflow: hidden;
 }
 
 .box-top-page {
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
     height: 70vh;
+    overflow: hidden;
+}
+
+/*.fluid-img {
+    width: 100%;
     background-image: url("../Imagens_gerais/bg.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}*/
+
+img {
+    height: 100%;
+    width: 100%;
 }
+
+.nextArrow, .prevArrow {
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    background-color: rgba(128, 128, 128, 0.541);
+    position: absolute;
+    font-size: 250%;
+    width: 10%;
+    height: 10%;
+    z-index: 1;
+}
+
+.prevArrow {
+    top: 50%;
+    left: 0%;
+}
+
+.nextArrow {
+    top: 50%;
+    right: 0%;
+}
+
+.mid-page {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.content-box {
+    position: absolute;
+    width: 70%;
+    height: 30%;
+    bottom: 80%;
+    z-index: 1;
+    background-color: rgb(212, 212, 212, .9);
+}
+
+.content-box-h1 {
+    height: 20%;
+    overflow: hidden;
+}
+
+.content-box div h1 {
+    text-align: center;
+    height: 100%;
+}
+
 
 @media (min-width: 900px) {
     .box-top-page {
         height: 110vh;
-        background-size: 100% 150%;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .header-content {
+        grid-template-columns: minmax(60px, 1fr) minmax(100px, 3fr) minmax(60px, 1fr);
+    }
+    header nav a {
+        display: none;
     }
 }
