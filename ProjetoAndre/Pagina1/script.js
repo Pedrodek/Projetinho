@@ -10,12 +10,8 @@ $('.box-top-page').slick({
   slidesToShow: 1,
   adaptiveHeight: true,
   slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000
-});
-
-$(document).ready(function() {
-  $('h1').text('Heading');
+  autoplay: false,
+  autoplaySpeed: 5000
 });
 
 
