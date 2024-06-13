@@ -130,26 +130,42 @@ main {
     position: relative;
 }
 
-.slide-titles {
+.slide-titles, .slide-texts {
     position: absolute;
-    font-weight: 700;
-    font-size: calc(2.4rem + 1vw);
-    color: rgb(194, 13, 255);
-    top: calc(8% + 1vw);
-    left: calc(60% + 1vw);
-    transition: .5s all ease;
+    transition: 1.6s all ease;
     overflow: hidden;
 }
 
-.slide-texts {
-    position: absolute;
+.slide-titles {
     font-weight: 700;
+    font-size: calc(2.4rem + 1vw);
+    color: rgb(194, 13, 255);
+}
+
+.slide-texts {
+    font-weight: 500;
     font-size: calc(.5rem + 1vw);
     color: rgb(173, 10, 228);
+}
+
+.first-slide-title {
+    top: calc(8% + 1vw);
+    left: calc(60% + 1vw);
+}
+
+.first-slide-text {
     top: calc(12% + 1vw);
     left: calc(50% + 1vw);
-    transition: .5s all ease;
-    overflow: hidden;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(-70%);
+}
+
+.fade-in.visible, .fade-in.visible {
+    opacity: 1;
+    transform: translateY(70%);
 }
 
 img {

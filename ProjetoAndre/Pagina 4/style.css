@@ -3,6 +3,15 @@
     margin: 0;
 }
 
+body{
+    display: grid;
+}
+
 .titulo{
-    
+    text-align: center;
+}
+
+.undertale{
+    width: 20%;
+    justify-items: center;
 }
