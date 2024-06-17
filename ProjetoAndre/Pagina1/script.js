@@ -1,5 +1,5 @@
 
-$('.box-top-page').slick({
+$('.slicker-box').slick({
   prevArrow: '<button type="button" class="prevArrow">&#8592;</button>',
   nextArrow: '<button type="button" class="nextArrow">&#8594;</button>',
   dots: false,
