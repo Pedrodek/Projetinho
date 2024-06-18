@@ -8,7 +8,7 @@ $('.slicker-box').slick({
   slidesToShow: 1,
   adaptiveHeight: true,
   slidesToScroll: 1,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 5000,
 });
 
