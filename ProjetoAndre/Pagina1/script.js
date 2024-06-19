@@ -8,8 +8,8 @@ console.log(slickerOST)
 
 
 $('.slicker-box').slick({
-  prevArrow: '<button type="button" class="prevArrow">&#8592;</button>',
-  nextArrow: '<button type="button" class="nextArrow">&#8594;</button>',
+  prevArrow: '<button type="button" class="prevArrow"><div>&#8592;</div></button>',
+  nextArrow: '<button type="button" class="nextArrow"><div>&#8594;</div></button>',
   dots: false,
   infinite: true,
   speed: 300,

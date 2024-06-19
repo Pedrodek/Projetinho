@@ -55,7 +55,7 @@ header {
     justify-content: center;
     align-content: center;
     height: 7%;
-    padding: 1%;
+    padding: .5%;
     background-color: var(--header-bg);
     /*position: fixed;*/
     z-index: 2;
@@ -75,11 +75,11 @@ header {
 .logo {
     display: flex;
     box-sizing: border-box;
-    position: relative;
 }
 
 .logo img {
-    width: 92%;
+    width: 76%;
+    overflow: visible;
 }
 
 header nav {
