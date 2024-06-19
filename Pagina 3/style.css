@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,body{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+body {
+    display: grid;
+    justify-items: center;
+    background: url('C:\Users\yuri.lsilva2.SENACEDU\Videos\riko-rikoamv.gif');
+}
+.linha-horizontal {
+    border: none;
+    border-top: 2px solid black;
+    width: 80%;
+    margin: 20px;
+}
+
+.titulo {
+    font-family: "Bebas Neue", sans-serif;
+    justify-self: left;
+    
+}
+
+.paragrafo_1 {
+    width: 90%;
+    display: grid;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+p {
+    font-size: 90%;
+    text-align: center;
+}
+
+.tenor-gif-embed {
+    width: 200px;
+    height: auto;
+    top: 40%;
+    left: 45%;
+}
+
+
+
+
