@@ -25,7 +25,7 @@ html, body {
 body {
     display: grid;
     grid-template-rows: 3% 1fr;
-    height: 300vh; /*ou 300vh*/
+    /*height: 300vh;*/ 
     font-size: var(--avg-font-size);
 }
 
@@ -114,7 +114,7 @@ header nav a:hover {
 
 header nav a:hover:after {
     transform-origin: left;
-    transform: scale(1);
+    transform: scaleX(1);
 }
 
 .icons {
@@ -217,7 +217,7 @@ main {
     transform: translateY(20%);
 }
 
-.fade-in.visible, .fade-in.visible {
+.fade-in.visible {
     opacity: 1;
     transform: translateY(-20%);
 }
@@ -291,16 +291,35 @@ img {
     height: 100%;
 }
 
-.more-mid-page {
-    display: grid;
-    height: 70vh;
+.theme-choosing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    padding: 1rem;
     background-color: rgba(220, 20, 60, 0.11);
 }
 
+.theme-choosing h2 {
+    overflow: hidden;
+}
+
+.theme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    overflow: hidden;
+}
 
 footer {
     align-items: center;
     justify-items: center;
+    padding: 1rem;
+    row-gap: 1rem;
     background-color: black;
     color: rgb(225, 225, 225);
 }
@@ -318,6 +337,37 @@ footer div a {
 
 .others {
     display: flex;
+    text-align: center;
+}
+
+.theme .slick-slider {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.theme .slick-track {
+    display: flex !important;
+    align-items: center;
+    
+    overflow: hidden;
+}
+
+.theme .slick-slide {
+    transition: all .2s;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.theme .slick-active {
+    transition: all .2s;
+    opacity: .7;
+    transform: scale(.6);
+}
+
+.theme .slick-current {
+    transition: all .2s;
+    opacity: 1;
+    transform: scale(1);
 }
 
 

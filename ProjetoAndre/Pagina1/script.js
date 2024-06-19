@@ -1,3 +1,10 @@
+const choicebtn = document.getElementById('choose');
+const slickerOST = document.querySelectorAll('.OSTs');
+const music = document.querySelectorAll('.music');
+const faders = document.querySelectorAll('.fade-in');
+
+console.log(slickerOST)
+
 
 $('.slicker-box').slick({
   prevArrow: '<button type="button" class="prevArrow">&#8592;</button>',
@@ -11,8 +18,6 @@ $('.slicker-box').slick({
   autoplay: true,
   autoplaySpeed: 5000,
 });
-
-const faders = document.querySelectorAll('.fade-in');
 
 const appearOptions = {
   threshold: 0.5,
@@ -30,6 +35,45 @@ const appearOnScroll = new IntersectionObserver(function (entries, appearOnScrol
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
+
+$('.theme').slick({
+  centerMode: true,
+  centerPadding: '70px',
+  slidesToShow: 3,
+  prevArrow: '<button type="button" class="prevArrow">&#8592;</button>',
+  nextArrow: '<button type="button" class="nextArrow">&#8594;</button>',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+function changePlaylist() {
+  slickerOST.forEach(divIframe => {
+    const divMusic = divIframe.getAttribute("data-theme");
+    console.log(divMusic);
+    console.log(divIframe.firstElementChild); 
+  });
+}
+
+choicebtn.addEventListener('click', changePlaylist)
+
+
+
 /*$("a").hover(
     function(){
       $(this).css("background-color", "red");
