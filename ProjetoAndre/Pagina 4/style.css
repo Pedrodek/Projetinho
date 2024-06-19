@@ -5,10 +5,27 @@
 
 body{
     display: grid;
+    background-color: rgba(212, 212, 212, 0.9);
 }
 
 .titulo{
     text-align: center;
+}
+
+article{
+    border: 2px black solid;
+    border-radius: .5rem;
+    background-color: rgba(250, 235, 215, 0.932);
+    width: 100%;
+    padding: .5rem;
+}
+
+.voltar{
+    font-size: xx-large;
+    border: 2px black solid;
+    border-radius: .5rem;
+    background-color: rgba(250, 235, 215, 0.932);
+    width: 100%;
 }
 
 .undertale{
