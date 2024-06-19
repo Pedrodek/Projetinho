@@ -41,7 +41,7 @@ body {
 
 .faixa-text {
     color: white ;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .page {
@@ -68,7 +68,7 @@ header {
     grid-template-rows: 1fr 0;
     grid-template-columns: 1fr 5fr 1fr;
     width: 92%;
-    overflow: hidden;
+    overflow: visible;
     font-size: calc(.4rem + 1vw);
 }
 
@@ -129,7 +129,7 @@ header nav a:hover:after {
 
 main {
     height: 100%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .slicker-box {
@@ -146,12 +146,12 @@ main {
     width: max-content;
     height: max-content;
     position: absolute;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .slide-titles, .slide-texts {
     padding: .6rem;
-    overflow: hidden;
+    overflow: visible;
     color: var(--slide-text-color);
     margin: 0;
 }
@@ -234,7 +234,7 @@ img {
     text-align: center;
     cursor: pointer;
     transition: all .3s ease;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .prevArrow {
@@ -273,7 +273,7 @@ img {
 
 .content-box-h1 {
     height: 20%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .content-box div h1 {
@@ -289,13 +289,14 @@ img {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 90vh;
+    height: 95vh;
     padding: 1rem;
     background-color: rgba(220, 20, 60, 0.11);
+
 }
 
 .theme-choosing h2 {
-    overflow: hidden;
+    overflow: visible;
 }
 
 .theme {
@@ -305,7 +306,7 @@ img {
     align-items: center;
     height: 100%;
     width: 90%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .div-songs-list {
@@ -364,7 +365,6 @@ footer div a {
     
     .faixa-text {
         color: white ;
-        overflow: hidden;
     }
     
     .page {
@@ -408,7 +408,7 @@ footer div a {
     }
 
     .sm-logo {
-        width: 40%;
+        width: 38%;
         margin-inline: 4.2rem;
     }
 
@@ -419,7 +419,6 @@ footer div a {
     
     main {
         height: 100%;
-        overflow: hidden;
     }
     
     .slicker-box {
@@ -427,7 +426,6 @@ footer div a {
         box-sizing: border-box;
         position: relative;
         height: 70vh;
-        overflow: hidden;
     }
 
     /*.slide-div {
@@ -464,7 +462,7 @@ footer div a {
     
     .slide-3 {
         top: 29%;
-        left: calc(7% + 1vw);
+        left: calc(10% + 1vw);
         text-align: center; 
     }
 
@@ -474,7 +472,7 @@ footer div a {
 
     .slide-4 {
         top: 20%;
-        left: calc(21% + 1vw);
+        left: calc(22% + 1vw);
         text-align: center;
     }
 
@@ -484,7 +482,7 @@ footer div a {
 
     .slide-5 {
         top: 20%;
-        left: calc(21% + 1vw);
+        left: calc(22% + 1vw);
         text-align: center;
     }
     
@@ -514,12 +512,7 @@ footer div a {
         height: calc(92% + 1vw);
         bottom: calc(26% + 1vw);
     }
-    
-    .content-box-h1 {
-        height: 20%;
-        overflow: hidden;
-    }
-    
+
     .content-box div p {
         font-size: calc(.6rem + 1vw);
     }
@@ -530,9 +523,19 @@ footer div a {
     
     .theme-choosing h2 {
         margin-bottom: 2rem;
+        position: relative;
         overflow: visible;
     }
-    
+
+    .theme-choosing h2:before {
+        content: "Arraste para o lado";
+        position: absolute;
+        text-align: center;
+        font-size: 50%;
+        opacity: .8;
+        top: 82%;
+        left: 10%;
+    }    
     .div-songs-list {
         padding: 1rem;
     }
@@ -542,7 +545,7 @@ footer div a {
     }
     
     .OSTs h2 {
-        overflow: hidden;
+        overflow: visible;
     }
     
     footer {

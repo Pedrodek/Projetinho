@@ -6,10 +6,17 @@
 body{
     display: grid;
     background-color: rgba(212, 212, 212, 0.9);
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.logo{
+    width: 25%;
 }
 
 .titulo{
     text-align: center;
+    grid-column: 2/2;
 }
 
 article{
@@ -18,6 +25,7 @@ article{
     background-color: rgba(250, 235, 215, 0.932);
     width: 100%;
     padding: .5rem;
+    grid-column: 2/2;
 }
 
 .voltar{
@@ -26,9 +34,17 @@ article{
     border-radius: .5rem;
     background-color: rgba(250, 235, 215, 0.932);
     width: 100%;
+    grid-column: 2/2
 }
 
-.undertale{
-    width: 20%;
+.imagens{
+    width: 75%;
+    grid-column: 2/2;
+}
+
+footer{
+    grid-column: 2/2;
+    width: 13%;
+    display: grid;
     justify-items: center;
 }
