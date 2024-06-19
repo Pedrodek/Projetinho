@@ -398,7 +398,7 @@ footer div a {
     
     .icons {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         font-size: 150%;
     }
@@ -409,10 +409,11 @@ footer div a {
 
     .sm-logo {
         width: 40%;
+        margin-inline: 4.2rem;
     }
 
     i {
-        font-size: 120%;
+        font-size: 160%;
         overflow: visible;
     }
     
@@ -429,7 +430,7 @@ footer div a {
         overflow: hidden;
     }
 
-   /* .slide-div {
+    /*.slide-div {
         background-color: rgba(0, 0, 0, 0.058);
         border-radius: .6rem;
     }*/
@@ -473,7 +474,7 @@ footer div a {
 
     .slide-4 {
         top: 20%;
-        left: calc(17% + 1vw);
+        left: calc(21% + 1vw);
         text-align: center;
     }
 
@@ -483,7 +484,7 @@ footer div a {
 
     .slide-5 {
         top: 20%;
-        left: calc(17% + 1vw);
+        left: calc(21% + 1vw);
         text-align: center;
     }
     
