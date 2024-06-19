@@ -136,17 +136,9 @@ main {
     display: flex;
     box-sizing: border-box;
     position: relative;
-    height: 70vh;
+    height: 110vh;
     overflow: hidden;
 }
-
-/*.fluid-img {
-    width: 100%;
-    background-image: url("../Imagens_gerais/bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}*/
 
 .slide-div {
     display: flex;
@@ -158,6 +150,7 @@ main {
 }
 
 .slide-titles, .slide-texts {
+    padding: .6rem;
     overflow: hidden;
     color: var(--slide-text-color);
     margin: 0;
@@ -176,8 +169,6 @@ main {
 }
 
 .slide {
-   /*display: flex;
-    box-sizing: border-box;*/
     position: relative;
     height: max-content;
 }
@@ -196,21 +187,23 @@ main {
 }
 
 .slide-3 {
-    top: 28%;
+    top: 31%;
     left: calc(35% + 1vw);
     text-align: center;
 
 }
 
-/*.first-slide-title {
-    top: calc(8% + 1vw);
-    left: calc(60% + 1vw);
+.slide-4 {
+    top: 20%;
+    left: calc(38% + 1vw);
+    text-align: center;
 }
 
-.first-slide-text {
-    top: calc(12% + 1vw);
-    left: calc(50% + 1vw);
-}*/
+.slide-5 {
+    top: 10%;
+    left: calc(38% + 1vw);
+    text-align: center;
+}
 
 .fade-in {
     opacity: 0;
@@ -315,6 +308,24 @@ img {
     overflow: hidden;
 }
 
+.div-songs-list {
+    margin-top: 5rem;
+    margin: 1rem;
+}
+
+.OSTs {
+    text-align: center;
+}
+
+.OSTs h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    font-size: calc(2rem + 1vw);
+    height: 15vh;
+}
+
 footer {
     align-items: center;
     justify-items: center;
@@ -340,55 +351,212 @@ footer div a {
     text-align: center;
 }
 
-.theme .slick-slider {
-    display: flex !important;
-    align-items: center !important;
-}
-
-.theme .slick-track {
-    display: flex !important;
-    align-items: center;
+@media (max-width: 768px) {
+    .faixa {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        background-image: url('./svgs/blurry-gradient-haikei4.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     
-    overflow: hidden;
-}
-
-.theme .slick-slide {
-    transition: all .2s;
-    opacity: 0;
-    transform: scale(0);
-}
-
-.theme .slick-active {
-    transition: all .2s;
-    opacity: .7;
-    transform: scale(.6);
-}
-
-.theme .slick-current {
-    transition: all .2s;
-    opacity: 1;
-    transform: scale(1);
-}
-
-
-@media (min-width: 900px) {
-    .slicker-box {
-        height: 110vh;
+    .faixa-text {
+        color: white ;
+        overflow: hidden;
     }
-}
-
-/*
-@media (max-width: 1000px) {
+    
+    .page {
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+    
+    header {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        align-content: center;
+        height: 7%;
+        padding: 1%;
+        background-color: var(--header-bg);
+        /*position: fixed;*/
+        z-index: 2;
+    }
+    
     .header-content {
-        grid-template-columns: minmax(60px, 1fr) minmax(100px, 3fr) minmax(60px, 1fr);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        font-size: calc(.4rem + 1vw);
     }
-    header nav a {
+    
+    header nav {
         display: none;
     }
+    
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 150%;
+    }
+    
+    .icon-1 {
+        width: 12%;
+    }
+
+    .sm-logo {
+        width: 40%;
+    }
+
+    i {
+        font-size: 120%;
+        overflow: visible;
+    }
+    
+    main {
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .slicker-box {
+        display: flex;
+        box-sizing: border-box;
+        position: relative;
+        height: 70vh;
+        overflow: hidden;
+    }
+
+   /* .slide-div {
+        background-color: rgba(0, 0, 0, 0.058);
+        border-radius: .6rem;
+    }*/
+
+    .slide-titles, .slide-texts {
+        padding: .4rem;
+        color: rgb(229, 254, 254);
+        font-weight: 900;
+    }
+    
+    .slide-titles {
+        font-size: calc(1.6rem + 1vw);
+    }
+    
+    .slide-texts {
+        font-size: calc(.5rem + 1vw);
+    }
+
+    .slide-1 {
+        top: 19%;
+        left: 5%;
+        text-align: start;
+    }
+    
+    .slide-2 {
+        top: 16%;
+        right: 10%;
+        text-align: end;
+    
+    }
+    
+    .slide-3 {
+        top: 29%;
+        left: calc(7% + 1vw);
+        text-align: center; 
+    }
+
+    .slide-3 .slide-titles, .slide-3 .slide-texts{
+        color: black;
+    }
+
+    .slide-4 {
+        top: 20%;
+        left: calc(17% + 1vw);
+        text-align: center;
+    }
+
+    .slide-4 .slide-titles, .slide-4 .slide-texts{
+        color: rgb(0, 0, 0);
+    }
+
+    .slide-5 {
+        top: 20%;
+        left: calc(17% + 1vw);
+        text-align: center;
+    }
+    
+    .nextArrow, .prevArrow {
+        font-size: calc(1.4rem + 1vw);
+        width: 18%;
+        height: 12%;
+    }
+    
+    .prevArrow {
+        top: 40%;
+        left: .8%;
+    }
+    
+    .nextArrow {
+        top: 40%;
+        right: 1%;
+    }
+    
+    .mid-page {
+        width: 100%;
+        height: 60vh;
+    }
+    
     .content-box {
-        font-size: var(--avg-font-size-sm);
+        width: 80%;
+        height: calc(92% + 1vw);
+        bottom: calc(26% + 1vw);
     }
+    
     .content-box-h1 {
-        font-size: var(--avg-h-size);
+        height: 20%;
+        overflow: hidden;
     }
-}*/
+    
+    .content-box div p {
+        font-size: calc(.6rem + 1vw);
+    }
+    
+    .theme-choosing {
+        height: 50vh;
+    }
+    
+    .theme-choosing h2 {
+        margin-bottom: 2rem;
+        overflow: visible;
+    }
+    
+    .div-songs-list {
+        padding: 1rem;
+    }
+    
+    .OSTs {
+       width: 100%;
+    }
+    
+    .OSTs h2 {
+        overflow: hidden;
+    }
+    
+    footer {
+        padding: 1rem;
+        row-gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .footer-nav {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    footer div a {
+        
+    }
+}

@@ -1,7 +1,7 @@
 const choicebtn = document.querySelectorAll('#choose');
 const slickerOST = document.querySelectorAll('.OSTs');
 const music = document.querySelectorAll('.music');
-const songsList = document.querySelector('.a')
+const divSongsList = document.querySelector('.div-songs-list')
 const faders = document.querySelectorAll('.fade-in');
 
 console.log(slickerOST)
@@ -41,6 +41,7 @@ $('.theme').slick({
   centerMode: true,
   centerPadding: '70px',
   slidesToShow: 3,
+  draggable: false,
   prevArrow: '<button type="button" class="prevArrow">&#8592;</button>',
   nextArrow: '<button type="button" class="nextArrow">&#8594;</button>',
   responsive: [
@@ -73,8 +74,6 @@ function slickin() {
     slidesToShow: 1,
     adaptiveHeight: true,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
   });
 }
 
@@ -87,60 +86,56 @@ choicebtn.forEach(btn => {
 })
 
 document.addEventListener('themeChange', (e) => {
-  const dataTheme = e.detail.dataTheme
-  if (dataTheme === "Frieren") {
-    songsList.innerHTML = `
-    <div class="slicker-box songs-list">
-      <div class="OSTs" data-theme="Frieren">
-        <iframe width="1481" height="546" src="https://www.youtube.com/embed/7S3eJG-8v_E" title="Zoltraak" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>         
-    </div>
-    `
-    slickin()
-  } else if(dataTheme === "Bocchi") {
-    songsList.innerHTML = `
-    <div class="slicker-box songs-list">
-      <div class="OSTs" data-theme="Bocchi">
-        <iframe width="1481" height="546" src="https://www.youtube.com/embed/Y45cVOrRZZs" title="SICK HACK - Watashi Dake Yuurei (ワタシダケユウレイ) [Full version]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  const dataTheme = e.detail.dataTheme;
+  const videoData = {
+    "Frieren": [
+      { src: "https://www.youtube.com/embed/q5cw38y5Ajo", title: "One Last Adventure" },
+      { src: "https://www.youtube.com/embed/7S3eJG-8v_E", title: "Zoltraak" },
+      { src: "https://www.youtube.com/embed/2ri6KxfpC_4", title: "Headpats and Praise" }
+    ],
+    "Bocchi": [
+      { src: "https://www.youtube.com/embed/MTPiaDzacSI", title: "Karakara" },
+      { src: "https://www.youtube.com/embed/Y45cVOrRZZs", title: "SICK HACK - Watashi Dake Yuurei" },
+      { src: "https://www.youtube.com/embed/wbQEA_nxLaE", title: "Distortion!!" }
+    ],
+    "Apothecary": [
+      { src: "https://www.youtube.com/embed/wLaYO08gHqo", title: "Omoi Saku Toki" },
+      { src: "https://www.youtube.com/embed/EQ-DKvLQlyQ", title: "Be a Flower" },
+      { src: "https://www.youtube.com/embed/0IWHP35Pi-0", title: "Sofu" }
+    ],
+    "Honkai": [
+      { src: "https://www.youtube.com/embed/PVqezHKDPC4", title: "Wildfire" },
+      { src: "https://www.youtube.com/embed/iRvmI7Cbgzk", title: "Sway to My Beat in Cosmos" },
+      { src: "https://www.youtube.com/embed/UYe_vYD0MDM", title: "Samudrartha" },
+      { src: "https://www.youtube.com/embed/lMlxrkf7Z0A", title: "Interstellar Journey" }
+    ],
+    "Undertale": [
+      { src: "https://www.youtube.com/embed/tz82xbLvK_k", title: "Hopes & Dreams" },
+      { src: "https://www.youtube.com/embed/qrBB3_rFPjg", title: "Spear of Justice" },
+      { src: "https://www.youtube.com/embed/y_qHuDjE3CQ", title: "Tem Shop" }
+    ],
+    "Hollow Knight": [
+      { src: "https://www.youtube.com/embed/Mq8E_1LkoAc", title: "Nightmare King" },
+      { src: "https://www.youtube.com/embed/ze0Rk-m0w2A", title: "Sealed Vessel" },
+      { src: "https://www.youtube.com/embed/Lp5M2BAXwSo", title: "Mantis Lords" }
+    ]
+  };
+
+  function createVideoHTML(videos) {
+    return videos.map(video => `
+      <div class="OSTs" data-theme="${dataTheme}">
+        <iframe width="1481" height="546" src="${video.src}" title="${video.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h2>${video.title}</h2>
       </div>
-      <div class="OSTs" data-theme="Bocchi">
-        <iframe width="1481" height="546" src="https://www.youtube.com/embed/MTPiaDzacSI" title="TVアニメ「ぼっち・ざ・ろっく！」エンディング映像/「カラカラ」#結束バンド" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="OSTs" data-theme="Bocchi">
-        <iframe width="1481" height="546" src="https://www.youtube.com/embed/wbQEA_nxLaE" title="BOCCHI THE ROCK! - Ending | Distortion!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </div>
-    `
-    slickin()
-  } else if (dataTheme === "Apothecary") {
-    songsList.innerHTML = `
-    <div class="OSTs" data-theme="Apothecary">
-      <iframe width="1481" height="546" src="https://www.youtube.com/embed/wLaYO08gHqo" title="想い咲く時（TVアニメ『薬屋のひとりごと』挿入歌）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    `
-    slickin()
-  } else if (dataTheme === "Honkai") {
-    songsList.innerHTML = `
-    <div class="OSTs" data-theme="Honkai">
-      <iframe width="1481" height="546" src="https://www.youtube.com/embed/iRvmI7Cbgzk" title="Sway to My Beat in Cosmos - Honkai: Star Rail OST" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    `
-  } else if (dataTheme === "Undertale") {
-    songsList.innerHTML = `
-    <div class="OSTs" data-theme="Undertale">
-      <iframe width="1481" height="546" src="https://www.youtube.com/embed/tz82xbLvK_k" title="Undertale Ost: 087 - Hopes and Dreams" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    `
-    slickin()
-  } else if (dataTheme === "Hollow Knight") {
-    songsList.innerHTML = `
-    <div class="OSTs" data-theme="Hollow Knight">
-      <iframe width="1481" height="546" src="https://www.youtube.com/embed/Mq8E_1LkoAc" title="Nightmare King (Hollow Knight: The Grimm Troupe)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    `
-    slickin()
+    `).join('');
   }
-})
+
+  if (videoData[dataTheme]) {
+    divSongsList.innerHTML = `<div class="slicker-box songs-list">${createVideoHTML(videoData[dataTheme])}</div>`;
+    slickin();
+  }
+});
+
   
 
 

@@ -1,0 +1,44 @@
+.theme .slick-slider {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.theme .slick-track {
+    display: flex !important;
+    align-items: center;
+    overflow: hidden;
+}
+
+.theme .slick-slide {
+    transition: all .2s;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.theme .slick-active {
+    transition: all .2s;
+    opacity: .7;
+    transform: scale(.6);
+}
+
+.theme .slick-current {
+    transition: all .2s;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.theme .slick-slide button {
+    cursor: default;
+}
+
+.theme .slick-active button {
+    cursor: default;
+}
+
+.theme .slick-current button {
+    cursor: pointer;
+}
+
+.div-songs-list .slick-track {
+    
+}
