@@ -13,7 +13,9 @@ html,body{
 body {
     display: grid;
     justify-items: center;
-    background: url('C:\Users\yuri.lsilva2.SENACEDU\Videos\riko-rikoamv.gif');
+    background-image: url("../Imagens_gerais/animes.jpg");
+    background-position: center;
+    background-size: contain;
 }
 .linha-horizontal {
     border: none;
@@ -23,8 +25,10 @@ body {
 }
 
 .titulo {
+    grid-column: 1/1;
     font-family: "Bebas Neue", sans-serif;
     justify-self: left;
+    color: #f5f5dc;
     
 }
 
@@ -34,7 +38,8 @@ body {
     align-items: center;
     border: 2px solid rgb(0, 0, 0);
     padding: 10px;
-    background-color: aliceblue;
+    background-color: #ffffff6b;
+    font-weight: bold;
 }
 
 p {
@@ -42,12 +47,45 @@ p {
     text-align: center;
 }
 
-.tenor-gif-embed {
-    width: 200px;
-    height: auto;
-    top: 40%;
-    left: 45%;
+.titulo2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-self: center;
+    color: #f5f5dc;
+    
+    
 }
+.logo {
+    justify-self: right;
+    grid-column: 2/2;
+}
+
+.tituloelogo {
+    grid-row: 1/1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0;
+    width: 100%;
+    height: 20vh;
+
+}
+
+footer{
+    grid-column: 1/1;
+    width: 13%;
+    display: grid;
+    justify-items: right;
+}
+
+.voltar{
+    font-size: large;
+    border: 3px black solid;
+    border-radius: .5rem;
+    background-color: rgba(250, 235, 215, 0.932);
+    width: 50%;
+    height: 64%;
+    grid-column: 2/2
+}
+
 
 
 

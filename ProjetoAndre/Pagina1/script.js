@@ -117,6 +117,11 @@ document.addEventListener('themeChange', (e) => {
       { src: "https://www.youtube.com/embed/Mq8E_1LkoAc", title: "Nightmare King" },
       { src: "https://www.youtube.com/embed/ze0Rk-m0w2A", title: "Sealed Vessel" },
       { src: "https://www.youtube.com/embed/Lp5M2BAXwSo", title: "Mantis Lords" }
+    ],
+    "Dark Souls 3": [
+      { src: "https://www.youtube.com/embed/dXcwGZV5Or4", title: "Soul of Cinder" },
+      { src: "https://www.youtube.com/embed/OLUfZG4VEHI", title: "Ashes of Ariandel" },
+      { src: "https://www.youtube.com/embed/CLdvxrdLeio", title: "Vordt of Boreal Valley" }
     ]
   };
 
