@@ -4,9 +4,6 @@ const music = document.querySelectorAll('.music');
 const divSongsList = document.querySelector('.div-songs-list')
 const faders = document.querySelectorAll('.fade-in');
 
-console.log(slickerOST)
-
-
 $('.slicker-box').slick({
   prevArrow: '<button type="button" class="prevArrow"><div>&#8592;</div></button>',
   nextArrow: '<button type="button" class="nextArrow"><div>&#8594;</div></button>',
