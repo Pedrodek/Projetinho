@@ -127,6 +127,11 @@ header nav a:hover:after {
     width: 20%;
 }
 
+i {
+    font-size: 120%;
+    overflow: visible;
+}
+
 main {
     height: 100%;
     overflow: visible;
@@ -490,6 +495,7 @@ footer div a {
         font-size: calc(1.4rem + 1vw);
         width: 18%;
         height: 12%;
+        z-index: 1;
     }
     
     .prevArrow {
@@ -545,7 +551,8 @@ footer div a {
     }
     
     .OSTs h2 {
-        overflow: visible;
+        font-size: calc(1.6rem + 1vw);
+        height: 10vh;
     }
     
     footer {

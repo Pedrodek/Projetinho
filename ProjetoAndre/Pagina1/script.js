@@ -4,6 +4,8 @@ const music = document.querySelectorAll('.music');
 const divSongsList = document.querySelector('.div-songs-list')
 const faders = document.querySelectorAll('.fade-in');
 
+const windowWidth = window.innerWidth;
+
 $('.slicker-box').slick({
   prevArrow: '<button type="button" class="prevArrow"><div>&#8592;</div></button>',
   nextArrow: '<button type="button" class="nextArrow"><div>&#8594;</div></button>',
@@ -119,12 +121,21 @@ document.addEventListener('themeChange', (e) => {
   };
 
   function createVideoHTML(videos) {
-    return videos.map(video => `
-      <div class="OSTs" data-theme="${dataTheme}">
-        <iframe width="1481" height="546" src="${video.src}" title="${video.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <h2>${video.title}</h2>
-      </div>
-    `).join('');
+    if (windowWidth > 900) {
+      return videos.map(video => `
+        <div class="OSTs" data-theme="${dataTheme}">
+          <iframe width="1481" height="546" src="${video.src}" title="${video.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <h2>${video.title}</h2>
+        </div>
+      `).join('');
+    } else {
+      return videos.map(video => `
+        <div class="OSTs" data-theme="${dataTheme}">
+          <iframe width="201" height="456" src="${video.src}" title="${video.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <h2>${video.title}</h2>
+        </div>
+      `).join('');
+    }
   }
 
   if (videoData[dataTheme]) {
